@@ -38,11 +38,23 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">ID Token Contents</div>
                     <div class="panel-body">
-                        <pre class="js-id-token"></pre>
+                        <pre class="js-user"></pre>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">API Result</div>
+                    <div class="panel-body">
+                        <pre class="js-api-result"></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
     </div>
 
     <script src="node_modules/jquery/dist/jquery.js"></script>
@@ -60,6 +72,7 @@
                 data = JSON.stringify(data, null, 2);
             }
 
+            var item = $(selector);
             $(selector).text(data);
         }
 
@@ -70,7 +83,7 @@
             popup_redirect_uri: 'https://localhost/jsOidc/popup.html',
            // redirect_uri: 'https://localhost/jsOidc/popup.html',
 
-            response_type: 'id_token',
+            response_type: 'id_token token',
             scope: 'openid profile',
             filterProtocolClaims: true
 
@@ -92,7 +105,8 @@
 
         manager.events.addUserLoaded(function (loadedUser) {
             user = loadedUser;
-            display('.js-user', user);
+            console.log(user.expires_in);
+            display(".js-user", user);
         });
 
         manager.events.addSilentRenewError(function (error) {
