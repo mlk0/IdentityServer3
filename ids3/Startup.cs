@@ -1,5 +1,4 @@
-﻿using ids3.Config;
-using IdentityServer3.Core.Configuration;
+﻿using IdentityServer3.Core.Configuration;
 using ids3.Config;
 using Owin;
 using System;
