@@ -22,3 +22,5 @@ This generates certificate for code signing and is storing it in LocalComputer/P
   The alternative would be to add the following class Attribute on the Startup class
   [assembly:OwinStartup(typeof(idx3.Startup))] 
 
+- updated hosting in the local iis to be https://localhost:44336/ 
+
