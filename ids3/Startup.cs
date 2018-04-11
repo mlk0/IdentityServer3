@@ -1,8 +1,12 @@
 ﻿using IdentityServer3.Core.Configuration;
 using ids3.Config;
 using Owin;
+using Serilog;
 using System;
 using System.Security.Cryptography.X509Certificates;
+
+
+ 
 
 namespace ids3
 {
@@ -10,6 +14,11 @@ namespace ids3
     {
         public void Configuration(IAppBuilder app)
         {
+            Log.Logger = new LoggerConfiguration()
+                            .MinimumLevel.Debug()
+                            .WriteTo.Trace()
+                            .CreateLogger();
+
             app.UseIdentityServer(new IdentityServerOptions
             {
                 SiteName = "Embedded IdentityServer",
