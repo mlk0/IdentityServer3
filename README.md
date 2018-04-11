@@ -24,3 +24,10 @@ This generates certificate for code signing and is storing it in LocalComputer/P
 
 - updated hosting in the local iis to be https://localhost:44336/ 
 
+
+- jsOidc is javaScript client using the oidc-client library to access the ids3
+
+- since I am unable to see the "IdServCert" under the available certificates when setting the bindings for the site, I noticed that there is already IIS Development Certificate that can be used and that one is used instead. It has the CN="localhost". 
+
+- logging is being setup to troubleshoot easily. 
+

@@ -22,7 +22,7 @@ namespace ids3
             app.UseIdentityServer(new IdentityServerOptions
             {
                 SiteName = "Embedded IdentityServer",
-                SigningCertificate = LoadCertificate("IdServCert"),
+                SigningCertificate = LoadCertificate("localhost"),
 
                 Factory = new IdentityServerServiceFactory()
                     .UseInMemoryUsers(Users.Get())

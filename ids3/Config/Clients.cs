@@ -32,7 +32,8 @@ namespace ids3.Config
 
                     AllowedCorsOrigins = new List<string>
                     {
-                        "https://localhost/jsOidc"
+                        "https://localhost/jsOidc",
+                        "http://localhost/jsOidc"
                     },
 
                     AllowAccessToAllScopes = true,
