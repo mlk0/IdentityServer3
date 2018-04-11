@@ -21,18 +21,18 @@ namespace ids3.Config
 
                     RedirectUris = new List<string>
                     {
-                        "http://localhost:56668/popup.html",
-                        "http://localhost:56668/silent-renew.html"
+                        "https://localhost/jsOidc/popup.html"
+                       // "http://localhost:56668/silent-renew.html"
                     },
 
                     PostLogoutRedirectUris = new List<string>
                     {
-                        "http://localhost:56668/index.html"
+                        "https://localhost/jsOidc/index.html"
                     },
 
                     AllowedCorsOrigins = new List<string>
                     {
-                        "http://localhost:56668"
+                        "https://localhost/jsOidc"
                     },
 
                     AllowAccessToAllScopes = true,
